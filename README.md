@@ -1,3 +1,6 @@
+An IoT-based fire detection prototype using ESP32, MQ2 gas sensor, DHT11, and Blynk for real-time mobile alerts.
+
+
 #define BLYNK_TEMPLATE_ID "TMPL3VJxQUV-f"
 #define BLYNK_TEMPLATE_NAME "FIRE DETECTION"
 #define BLYNK_AUTH_TOKEN "YourAuthToken"  // Replace with your actual Blynk Auth Token
