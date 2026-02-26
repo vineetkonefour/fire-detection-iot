@@ -1,85 +1,120 @@
-# Smart Fire Detection System 🔥
+# 🔥 Smart Fire Detection & Alert System (IoT Based)
 
-## 📌 Project Overview
-This project is an IoT-based Smart Fire Detection and Alert System built using ESP32.  
-It detects hazardous gases and temperature rise using sensors and sends real-time alerts through Blynk IoT platform.
+An IoT-enabled fire detection system built using ESP32 that monitors gas leakage and temperature changes in real time and sends alerts through the Blynk IoT platform.
 
 ---
 
-## 🚀 Components Used
+## 📌 Project Objective
+
+To design and implement a reliable fire detection prototype capable of:
+- Detecting flammable gases and smoke
+- Monitoring ambient temperature
+- Sending real-time alerts remotely
+- Triggering an audible alarm during emergencies
+
+---
+
+## 🧠 System Architecture
+
+MQ2 Gas Sensor + DHT11 Temperature Sensor  
+            ↓  
+         ESP32  
+            ↓  
+        WiFi Network  
+            ↓  
+       Blynk IoT Dashboard  
+            ↓  
+     User Notification & Monitoring  
+
+---
+
+## ⚙️ Technologies Used
+
+**Hardware**
 - ESP32
 - MQ2 Gas Sensor
 - DHT11 Temperature Sensor
 - Buzzer
-- Jumper Wires
-- Breadboard
 
----
-
-## 💻 Software Used
+**Software**
 - Arduino IDE
-- Blynk IoT Platform
+- Embedded C++
+- Blynk IoT
 - GitHub
 
 ---
 
-## ⚙️ Working Principle
-1. MQ2 gas sensor continuously monitors flammable gases like LPG, methane, and smoke.
-2. DHT11 sensor monitors temperature changes.
-3. ESP32 reads sensor data every 2 seconds.
-4. If gas level or temperature crosses a threshold:
-   - Buzzer turns ON
-   - Alert is sent to Blynk app
-5. Data is displayed in real-time on Blynk dashboard.
+## 🔌 Pin Configuration
+
+| Component | ESP32 Pin | Purpose |
+|------------|------------|----------|
+| MQ2 (Analog Out) | GPIO34 | Gas level reading |
+| DHT11 (Data) | GPIO4 | Temperature reading |
+| Buzzer | GPIO5 | Emergency alert |
 
 ---
 
-## 🔌 Pin Connections
+## 🔍 Working Principle
 
-| Component | ESP32 Pin |
-|------------|------------|
-| MQ2 (Analog Output) | GPIO34 |
-| DHT11 (Data) | GPIO4 |
-| Buzzer | GPIO5 |
+- The MQ2 sensor continuously detects combustible gases such as LPG, methane, hydrogen, and smoke.
+- The DHT11 sensor measures ambient temperature.
+- ESP32 reads sensor data every 2 seconds.
+- If gas concentration or temperature exceeds predefined threshold:
+  - Buzzer activates
+  - Alert is sent to Blynk dashboard
+- Sensor readings are displayed in real time via WiFi.
 
 ---
 
-## 🌡 Sensor Details
+## 🌡 Sensor Specifications
 
 ### MQ2 Gas Sensor
-Detects:
-- LPG
-- Methane
-- Hydrogen
-- Propane
-- Smoke
+- Detects: LPG, Methane, Hydrogen, Propane, Smoke
+- Output: Analog signal proportional to gas concentration
+- Preheating required before stable readings
 
 ### DHT11 Temperature Sensor
 - Temperature Range: 0°C to 50°C
 - Accuracy: ±2°C
+- Digital output signal
 
 ---
 
-## 📱 IoT Integration
+## 📲 IoT Integration
+
 The system uses Blynk IoT to:
-- Monitor sensor data remotely
-- Send alerts
-- Display real-time readings
+- Display live temperature and gas readings
+- Send remote alerts
+- Enable monitoring from anywhere with internet access
 
 ---
 
-## 🔮 Future Improvements
-- Add flame sensor
-- Add GSM module for SMS alerts
-- Automatic sprinkler activation
+## 🚀 Future Enhancements
+
+- Replace DHT11 with DHT22 for higher temperature range
+- Add flame sensor for direct fire detection
+- Integrate GSM module for SMS alerts
+- Add automatic sprinkler activation system
 
 ---
 
-## 📷 Circuit Diagram
-![Circuit Diagram](<img width="507" height="376" alt="esp32_wiring" src="https://github.com/user-attachments/assets/fd2e2eb9-7194-4429-b2f3-4277d4c09822" />
-)
+## 💡 Key Learning Outcomes
+
+- Embedded system programming
+- GPIO configuration on ESP32
+- Sensor calibration and threshold logic
+- Cloud-based IoT dashboard integration
+- Real-time data monitoring
 
 ---
 
-## 👨‍💻 Author
+## 📷 Circuit Diagram 
+
+![Circuit Diagram](Circuit_Diagram/esp32_wiring.png)
+
+---
+
+## 👤 Author
+
 Vineet K V
+Computer Science Student  
