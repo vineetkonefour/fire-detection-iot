@@ -110,7 +110,7 @@ The system uses Blynk IoT to:
 
 ## 📷 Circuit Diagram 
 
-![Circuit Diagram](Circuit_Diagram/esp32_wiring.png)
+![Circuit Diagram](Circuit Diagram/esp32_wiring.png)
 
 ---
 
